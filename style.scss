@@ -1,0 +1,121 @@
+@mixin texto1 {
+  font-family: "Kodchasan", system-ui;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+@mixin texto2 {
+  font-family: "Kodchasan", system-ui;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+@mixin paragrafo {
+  font-family: "Kodchasan", system-ui;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header {
+  width: 100vw;
+
+  img {
+    width: 100%;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #efeef3;
+    opacity: 90%;
+
+    img {
+      width: 10%;
+    }
+
+    nav {
+      width: 85%;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          text-decoration: none;
+          a {
+            @include texto2();
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  background-color: #efeef3;
+}
+
+.sobre {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+
+  div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h2 {
+      @include texto1();
+    }
+
+    p {
+      @include paragrafo();
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 30%;
+  }
+}
+
+.produtos {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    @include texto2();
+    width: 40%;
+  }
+
+  div {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
