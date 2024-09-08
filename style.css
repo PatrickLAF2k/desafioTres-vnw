@@ -6,11 +6,20 @@
   text-decoration: none;
 }
 
+body {
+  background-color: #efeef3;
+}
+
 header {
   width: 100vw;
 }
 header img {
   width: 100%;
+}
+@media (max-width: 475px) {
+  header img {
+    width: 0;
+  }
 }
 header div {
   display: flex;
@@ -23,15 +32,40 @@ header div {
   background-color: #efeef3;
   opacity: 90%;
 }
+@media (max-width: 475px) {
+  header div {
+    flex-direction: column;
+    position: relative;
+    background-color: none;
+    gap: 30px;
+  }
+}
 header div img {
   width: 10%;
+}
+@media (max-width: 475px) {
+  header div img {
+    width: 60%;
+  }
 }
 header div nav {
   width: 85%;
 }
+@media (max-width: 475px) {
+  header div nav {
+    width: 100%;
+  }
+}
 header div nav ul {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 475px) {
+  header div nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
 }
 header div nav ul li {
   text-decoration: none;
@@ -43,15 +77,26 @@ header div nav ul li a {
   font-weight: 400;
 }
 
-body {
-  background-color: #efeef3;
-}
-
 .sobre {
   width: 80%;
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
+}
+@media (max-width: 475px) {
+  .sobre {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+}
+.sobre img {
+  width: 30%;
+}
+@media (max-width: 475px) {
+  .sobre img {
+    width: 100%;
+  }
 }
 .sobre div {
   width: 50%;
@@ -61,11 +106,23 @@ body {
   justify-content: center;
   gap: 20px;
 }
+@media (max-width: 475px) {
+  .sobre div {
+    width: 95%;
+    gap: 30px;
+  }
+}
 .sobre div h2 {
   font-family: "Kodchasan", system-ui;
   font-size: 2rem;
   color: #000000;
   font-weight: 400;
+}
+@media (max-width: 475px) {
+  .sobre div h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 }
 .sobre div p {
   font-family: "Kodchasan", system-ui;
@@ -75,8 +132,11 @@ body {
   width: 80%;
   text-align: center;
 }
-.sobre img {
-  width: 30%;
+@media (max-width: 475px) {
+  .sobre div p {
+    width: 90%;
+    gap: 30px;
+  }
 }
 
 .produtos {
@@ -86,6 +146,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 475px) {
+  .produtos {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+}
 .produtos h2 {
   font-family: "Kodchasan", system-ui;
   font-size: 1.5rem;
@@ -93,8 +160,22 @@ body {
   font-weight: 400;
   width: 40%;
 }
+@media (max-width: 475px) {
+  .produtos h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+  }
+}
 .produtos div {
   width: 50%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 475px) {
+  .produtos div {
+    width: 70%;
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -27,11 +27,19 @@
   text-decoration: none;
 }
 
+body {
+  background-color: #efeef3;
+}
+
 header {
   width: 100vw;
 
   img {
     width: 100%;
+
+    @media (max-width: 475px) {
+      width: 0;
+    }
   }
 
   div {
@@ -45,16 +53,37 @@ header {
     background-color: #efeef3;
     opacity: 90%;
 
+    @media (max-width: 475px) {
+      flex-direction: column;
+      position: relative;
+      background-color: none;
+      gap: 30px;
+    }
+
     img {
       width: 10%;
+
+      @media (max-width: 475px) {
+        width: 60%;
+      }
     }
 
     nav {
       width: 85%;
 
+      @media (max-width: 475px) {
+        width: 100%;
+      }
+
       ul {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 475px) {
+          flex-direction: column;
+          text-align: center;
+          gap: 30px;
+        }
 
         li {
           text-decoration: none;
@@ -67,15 +96,25 @@ header {
   }
 }
 
-body {
-  background-color: #efeef3;
-}
-
 .sobre {
   width: 80%;
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
+
+  @media (max-width: 475px) {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+
+  img {
+    width: 30%;
+
+    @media (max-width: 475px) {
+      width: 100%;
+    }
+  }
 
   div {
     width: 50%;
@@ -85,19 +124,31 @@ body {
     justify-content: center;
     gap: 20px;
 
+    @media (max-width: 475px) {
+      width: 95%;
+      gap: 30px;
+    }
+
     h2 {
       @include texto1();
+
+      @media (max-width: 475px) {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
     }
 
     p {
       @include paragrafo();
       width: 80%;
       text-align: center;
-    }
-  }
 
-  img {
-    width: 30%;
+      @media (max-width: 475px) {
+        width: 90%;
+        gap: 30px;
+      }
+
+    }
   }
 }
 
@@ -108,14 +159,32 @@ body {
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: 475px) {
+    flex-direction: column;
+    width: 90%;
+    gap: 30px;
+  }
+
   h2 {
     @include texto2();
     width: 40%;
+
+    @media (max-width: 475px) {
+      font-size: 1.2rem;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   div {
     width: 50%;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 475px) {
+      width: 70%;
+      flex-wrap: wrap;
+    }
   }
 }
