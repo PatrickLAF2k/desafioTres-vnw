@@ -86,9 +86,21 @@ header {
         }
 
         li {
-          text-decoration: none;
           a {
             @include texto2();
+
+            @media (max-width: 1400px) {
+              font-size: 1.2rem;
+            }
+
+            @media (max-width: 1125px) {
+              font-size: 1rem;
+            }
+
+            @media (max-width: 935px) {
+              font-size: 0.8rem;
+              white-space: nowrap;
+            }
           }
         }
       }
@@ -147,7 +159,6 @@ header {
         width: 90%;
         gap: 30px;
       }
-
     }
   }
 }
@@ -185,6 +196,7 @@ header {
     @media (max-width: 475px) {
       width: 70%;
       flex-wrap: wrap;
+      gap: 20px;
     }
   }
 }
