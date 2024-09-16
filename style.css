@@ -16,7 +16,7 @@ header {
 header img {
   width: 100%;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   header img {
     width: 0;
   }
@@ -32,7 +32,7 @@ header div {
   background-color: #efeef3;
   opacity: 90%;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   header div {
     flex-direction: column;
     position: relative;
@@ -43,7 +43,7 @@ header div {
 header div img {
   width: 10%;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   header div img {
     width: 60%;
   }
@@ -51,7 +51,7 @@ header div img {
 header div nav {
   width: 85%;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   header div nav {
     width: 100%;
   }
@@ -60,7 +60,7 @@ header div nav ul {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   header div nav ul {
     flex-direction: column;
     text-align: center;
@@ -96,7 +96,7 @@ header div nav ul li a {
   justify-content: space-between;
   margin: 20px auto;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .sobre {
     flex-direction: column;
     width: 90%;
@@ -106,7 +106,7 @@ header div nav ul li a {
 .sobre img {
   width: 30%;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .sobre img {
     width: 100%;
   }
@@ -119,7 +119,7 @@ header div nav ul li a {
   justify-content: center;
   gap: 20px;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .sobre div {
     width: 95%;
     gap: 30px;
@@ -131,7 +131,7 @@ header div nav ul li a {
   color: #000000;
   font-weight: 400;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .sobre div h2 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -145,7 +145,7 @@ header div nav ul li a {
   width: 80%;
   text-align: center;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .sobre div p {
     width: 90%;
     gap: 30px;
@@ -159,7 +159,7 @@ header div nav ul li a {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .produtos {
     flex-direction: column;
     width: 90%;
@@ -173,7 +173,7 @@ header div nav ul li a {
   font-weight: 400;
   width: 40%;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .produtos h2 {
     font-size: 1.2rem;
     font-weight: 500;
@@ -186,7 +186,7 @@ header div nav ul li a {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 475px) {
+@media (max-width: 750px) {
   .produtos div {
     width: 70%;
     flex-wrap: wrap;
