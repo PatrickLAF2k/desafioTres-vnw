@@ -23,29 +23,40 @@ header img {
 }
 header div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
   padding: 10px 20px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+header div:hover {
   background-color: #efeef3;
-  opacity: 90%;
+}
+header div:hover img {
+  filter: none;
+}
+header div:hover nav a {
+  color: #000000;
 }
 @media (max-width: 750px) {
   header div {
     flex-direction: column;
     position: relative;
-    background-color: none;
+    background-color: #efeef3;
     gap: 30px;
   }
 }
 header div img {
   width: 10%;
+  filter: invert(1);
 }
 @media (max-width: 750px) {
   header div img {
     width: 60%;
+    filter: none;
   }
 }
 header div nav {
@@ -69,9 +80,16 @@ header div nav ul {
 }
 header div nav ul li a {
   font-family: "Kodchasan", system-ui;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #000000;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #efeef3;
+}
+@media (max-width: 750px) {
+  header div nav ul li a {
+    color: #000000;
+  }
 }
 @media (max-width: 1400px) {
   header div nav ul li a {
@@ -129,7 +147,7 @@ header div nav ul li a {
   font-family: "Kodchasan", system-ui;
   font-size: 2rem;
   color: #000000;
-  font-weight: 400;
+  font-weight: 500;
 }
 @media (max-width: 750px) {
   .sobre div h2 {
@@ -168,9 +186,9 @@ header div nav ul li a {
 }
 .produtos h2 {
   font-family: "Kodchasan", system-ui;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #000000;
-  font-weight: 400;
+  font-weight: 500;
   width: 40%;
 }
 @media (max-width: 750px) {

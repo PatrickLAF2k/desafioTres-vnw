@@ -1,15 +1,8 @@
-@mixin texto1 {
+@mixin texto {
   font-family: "Kodchasan", system-ui;
   font-size: 2rem;
   color: #000000;
-  font-weight: 400;
-}
-
-@mixin texto2 {
-  font-family: "Kodchasan", system-ui;
-  font-size: 1.5rem;
-  color: #000000;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @mixin paragrafo {
@@ -36,7 +29,7 @@ header {
 
   img {
     width: 100%;
-    
+
     @media (max-width: 750px) {
       width: 0;
     }
@@ -44,27 +37,41 @@ header {
 
   div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vw;
     padding: 10px 20px;
-    background-color: #efeef3;
-    opacity: 90%;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #efeef3;
+
+      img {
+        filter: none;
+      }
+
+      nav a {
+        color: #000000;
+      }
+    }
 
     @media (max-width: 750px) {
       flex-direction: column;
       position: relative;
-      background-color: none;
+      background-color: #efeef3;
       gap: 30px;
     }
 
     img {
       width: 10%;
+      filter: invert(1);
 
       @media (max-width: 750px) {
         width: 60%;
+        filter: none;
       }
     }
 
@@ -87,7 +94,13 @@ header {
 
         li {
           a {
-            @include texto2();
+            @include texto();
+            font-size: 1.5rem;
+            color: #efeef3;
+
+            @media (max-width: 750px) {
+              color: #000000;
+            }
 
             @media (max-width: 1400px) {
               font-size: 1.2rem;
@@ -142,7 +155,7 @@ header {
     }
 
     h2 {
-      @include texto1();
+      @include texto();
 
       @media (max-width: 750px) {
         font-size: 1.5rem;
@@ -177,7 +190,7 @@ header {
   }
 
   h2 {
-    @include texto2();
+    @include texto();
     width: 40%;
 
     @media (max-width: 750px) {
